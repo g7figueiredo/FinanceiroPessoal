@@ -1,0 +1,86 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+ 
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Financeiro Pessoal</title>
+        <style type="text/css">
+            body {background-color: #CAE1FF; font-size: 12px}
+        </style> 
+    </h:head>
+    <h:body>
+        <div align="center">
+            <p:layout style="min-width:1020px;max-width:1020px;min-height:650px">  
+                <p:layoutUnit position="north" size="165">  
+                    <h:graphicImage url="/tema/imagens/topo.png" />
+                </p:layoutUnit>  
+ 
+                <p:layoutUnit position="west" size="220">  
+                    <ui:insert name="menu">
+                        <h:form>
+                            <p:menu style="width: 200px">
+                                <p:submenu label="Menu">
+                                	<p:menuitem value="Inicio" icon="ui-icon-home" url="index.jsf" />
+                                    <p:menuitem value="Cadastros" icon="ui-icon-document-b" url="fornecedor.jsf"/>
+                                    <p:menuitem value="Contas" icon="ui-icon-clipboard" />
+                                    <p:menuitem value="Pagamentos" icon="ui-icon-suitcase" />
+                                    <p:menuitem value="Relatórios e gráficos" icon="ui-icon-document" />
+                                    <p:menuitem value="Configurações" icon="ui-icon-wrench" />         
+                                </p:submenu>
+                            </p:menu>
+                            <p:menu style="width: 200px">
+                                <p:submenu label="Login">
+                                	<p:menuitem value="Login" icon="ui-icon-key" onclick="PF('dlg').show()" title="login"/>
+                                    <p:menuitem value="Log-off" icon="ui-icon-document-b" />
+                                </p:submenu>
+                            </p:menu>
+                        </h:form>
+                    </ui:insert>
+                </p:layoutUnit>  
+                <p:layoutUnit position="center">  
+                    <ui:insert name="centro">
+               
+                    	<h:form id="form">  
+						    <p:growl id="growl" showDetail="true" life="3000" />  
+						  
+						    <p:dialog id="dialog" header="Login" widgetVar="dlg" resizable="false">  
+						  
+						        <h:panelGrid columns="2" cellpadding="5">  
+						            <h:outputLabel for="username" value="Username:" />  
+						            <p:inputText value="#{loginBean.username}"   
+						                    id="username" required="true" label="username" />  
+						              
+						            <h:outputLabel for="password" value="Password:" />  
+						            <h:inputSecret value="#{loginBean.password}"   
+						                    id="password" required="true" label="password" />  
+						              
+						            <f:facet name="footer">  
+						                <p:commandButton id="loginButton" value="Login" update="growl"   
+						                    actionListener="#{loginBean.login}"   
+						                    oncomplete="handleLoginRequest(xhr, status, args)"/>  
+						            </f:facet>  
+						        </h:panelGrid>  
+						          
+						    </p:dialog>  
+						</h:form>  
+						  
+						<script type="text/javascript">  
+						    function handleLoginRequest(xhr, status, args) {  
+						        if(args.validationFailed || !args.loggedIn) {  
+						            PF('dlg').jq.effect("shake", { times:5 }, 100);  
+						        }   
+						        else {  
+						            PF('dlg').hide();  
+						            $('#loginLink').fadeOut();  
+						        }  
+						    }  
+						</script> 
+                    </ui:insert>
+                </p:layoutUnit>  
+            </p:layout>  
+        </div>
+    </h:body>
+</html>
