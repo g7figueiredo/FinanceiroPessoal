@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7E19109C-775E-E0C7-4B68-8C774F596668" name="tbl_movimento_debito">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:06:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cod_movimento" id="17620B7E-B3B1-A10C-B13E-FE63EC8B15B4">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:06:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+</Attribute>
+<Attribute name="dt_movimento" id="58E514B9-0CBD-F5A8-2AED-F892DAF82B47">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:06:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Attribute>
+<Attribute name="desc_movimento" id="720B86A1-3B28-4DC9-8F7C-5ABF3534D93D">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:06:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+</Attribute>
+<Attribute name="vl_movimento" id="4B20B2C1-F421-4348-7015-A7F559C0571E">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:06:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+</Attribute>
+<Attribute name="tp_movimento" id="8D846EF2-F94A-4680-3492-8665DAEEFA81">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:07:19 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+</Attribute>
+<Attribute name="nr_documento" id="5AAE1E45-3F93-468E-7B37-CE2602A83327">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:14:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+</Attribute>
+<Attribute name="cod_conta" id="C89AC18E-F0FB-DE40-1743-C75344DB3AA2">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:38:48 UTC</createdTime>
+<generatorID>BA6CD553-2D44-F721-A4ED-459079D3CBF5</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9945BD9B-3EBE-89A5-89C1-A1AB7807AF85</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+</Attribute>
+<Attribute name="cod_favorecido" id="F91C8070-7DEE-9C1D-3B26-1AE4AC1E7F87">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:38:57 UTC</createdTime>
+<generatorID>454A5E6A-DAB1-CBE7-FDED-212F7245E4EA</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9FECA0D3-4DD7-AEC0-9A79-FEB9AAC9B88B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5CD017CF-8FE8-2B5C-4AF0-F353D8621A9F" name="tbl_movimento_credito PK">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:06:56 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>17620B7E-B3B1-A10C-B13E-FE63EC8B15B4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

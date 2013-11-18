@@ -1,0 +1,120 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Financeiro Pessoal - Cadastros</title>
+	<style type="text/css">
+body {
+	background-color: #CAE1FF;
+	font-size: 12px
+}
+</style>
+</h:head>
+<h:body>
+	<div align="center">
+		<p:layout
+			style="min-width:1020px;max-width:1020px;min-height:650px;max-height:650px;">
+			<p:layoutUnit position="north" size="165">
+				<h:graphicImage url="/tema/imagens/topo.png" />
+			</p:layoutUnit>
+
+			<p:layoutUnit position="center">
+				<ui:insert name="centro">
+					<h:form>
+						<!-- INICIO MENU -->
+						<p:growl id="messages" />
+						<p:menubar>
+							<p:menuitem value="Inicio" icon="ui-icon-home" url="index.jsf" />
+							<p:submenu label="Cadastros" icon="ui-icon-document-b">
+						    	<p:menuitem value="Fonte de receita" icon="ui-icon-document-b" url="fonteReceita.jsf"/>
+						    	<p:menuitem value="Centro de custo" icon="ui-icon-document-b" url="centroCusto.jsf"/>
+						    </p:submenu>
+							<p:submenu label="Gestão de contas">
+								<p:menuitem value="Mov. de contas" url="#" style="margin:2"
+									icon="imagemMovimentacao" />
+								<p:menuitem value="Contas à receber" url="#" style="margin:2"
+									icon="imagemContasReceber" />
+								<p:menuitem value="Contas à pagar" url="#" style="margin:2"
+									icon="imagemContasPagar" />
+								<p:menuitem value="Relatórios" url="#" style="margin:2"
+									icon="imagemRelatorios" />
+							</p:submenu>
+							<p:menuitem value="Relatórios e gráficos" icon="ui-icon-document" />
+							<p:menuitem value="Configurações" icon="ui-icon-wrench" />
+
+							<f:facet name="options">
+								<p:inputText style="margin-right:10px" />
+								<p:commandButton type="button" value="Logout"
+									icon="ui-icon-extlink" />
+							</f:facet>
+						</p:menubar>
+						<!-- FIM MENU -->
+
+					</h:form>
+
+					<h:form id="CadastroCentroCusto">
+						<p:growl id="growl" showDetail="true" life="4000" />
+						<p:panelGrid columns="2">
+
+							<f:facet name="header">  
+									        Cadastro de centro de custo  
+									    </f:facet>
+
+							<h:outputLabel for="descCentro"
+								value="Descrição do centro de custo: *" />
+							<p:inputText id="descCentro" value=""
+								label="Descricao do centro de custo" size="50" required="true" />
+
+							<f:facet name="footer">
+								<p:commandButton id="btnSalvar" value="Salvar"
+									icon="ui-icon-check" style="margin:0" update="growl" />
+
+								<p:commandButton id="btnCancelar" value="Cancelar"
+									icon="ui-icon-closethick" style="margin:5" update="growl" />
+							</f:facet>
+						</p:panelGrid>
+					</h:form>
+
+					<h3>Lista de centro de custo</h3>
+					<p:separator id="separatorCentroCusto" />
+
+					<h:form>
+						<p:dataTable var="centroCusto" align="center" value=""
+							scrollRows="20" scrollable="true" liveScroll="true"
+							scrollHeight="150">
+
+							<p:column headerText="Código" width="60">
+								<h:outputText value="" />
+							</p:column>
+
+							<p:column headerText="Descrição" width="300">
+								<h:outputText value="" />
+							</p:column>
+
+							<!-- 								        <p:column headerText="Editar" width="40">   -->
+							<!-- 								            <h:commandLink action="#{fornecedorBean.editar}"> -->
+							<!-- 								            	<h:graphicImage url="/tema/imagens/edit.png" style="border:0"/> -->
+							<!-- 								            	<f:setPropertyActionListener target="#{fornecedorBean.fornecedor}" value="#{fornecedor}" /> -->
+							<!-- 								            </h:commandLink> -->
+							<!-- 								        </p:column> -->
+
+							<!-- 								        <p:column headerText="Excluir" width="50">   -->
+							<!-- 								            <h:commandLink action="#{fornecedorBean.excluir}" -->
+							<!-- 								            	onclick="if (!confirm('Confirma a exclusão do fornecedor #{fornecedor.nomeRazao}?')) return false;"> -->
+							<!-- 								            	<h:graphicImage url="/tema/imagens/delete.png" style="border:0"/> -->
+							<!-- 								            	<f:setPropertyActionListener target="#{fornecedorBean.fornecedor}" value="#{fornecedor}" /> -->
+							<!-- 								            </h:commandLink> -->
+							<!-- 								        </p:column> -->
+						</p:dataTable>
+					</h:form>
+
+				</ui:insert>
+			</p:layoutUnit>
+		</p:layout>
+	</div>
+</h:body>
+</html>

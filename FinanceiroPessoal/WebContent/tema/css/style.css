@@ -1,0 +1,9 @@
+
+
+.imagemMovimentacao     { width: 16px; height: 16px; background-image: url(../imagens/cards.png)     !important;}
+
+.imagemContasReceber     { width: 16px; height: 16px; background-image: url(../imagens/money_in.png)     !important;}
+
+.imagemContasPagar     { width: 16px; height: 16px; background-image: url(../imagens/money_off.png)     !important;}
+
+.imagemRelatorios     { width: 16px; height: 16px; background-image: url(../imagens/report.png)     !important;}

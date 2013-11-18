@@ -1,0 +1,174 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C8391E6A-4EC6-520F-F03E-756EDF8CC05A" name="tbl_conta_bancaria">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 04:48:15 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cod_conta" id="9945BD9B-3EBE-89A5-89C1-A1AB7807AF85">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 05:45:23 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+</Attribute>
+<Attribute name="nr_conta" id="C0E7D92C-14AC-0AF8-B30C-64FBB80C4227">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 05:45:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+</Attribute>
+<Attribute name="dig_conta" id="C448289F-E1A1-9ABB-2870-3FA680502BAD">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 05:46:21 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+</Attribute>
+<Attribute name="nr_agencia" id="F3D52C28-6A57-C544-033A-16669C43D6E0">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 05:47:06 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+</Attribute>
+<Attribute name="dig_agencia" id="CE07AD74-070E-8F47-F391-E9CC95B8F98E">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 05:47:17 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+</Attribute>
+<Attribute name="tipo_conta" id="8596ED5A-5BCF-64BD-6F66-476026AF0633">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 05:55:10 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+<Attribute name="cheque_especial" id="BA606230-C8AC-4853-19C7-9BCB368CC0B3">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 05:47:31 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+</Attribute>
+<Attribute name="dia_mes_aniversario" id="539791AE-9D44-D0CD-44A9-869019E60D69">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 05:49:11 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+</Attribute>
+<Attribute name="cod_banco" id="008C82F4-272F-8128-C510-EF76D0EED9CA">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:40:44 UTC</createdTime>
+<generatorID>ABA5E26E-1BF9-2A47-14D8-862EEE40BCFB</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>1189B8A0-F50D-FF97-C0FE-C43827A82DB9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+</Attribute>
+<Attribute name="nr_cpf" id="80CCFECD-DAE3-B7F3-F39A-1BC3F3A4979D">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:40:52 UTC</createdTime>
+<generatorID>8130A5B8-28D4-1A64-3B1C-73D51F389748</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>65A03A63-2C7A-39F8-C4C0-8371B7C14413</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B210E466-57DE-5050-6C8C-CAB96CB02EC3" name="tbl_conta_bancaria PK">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 05:45:49 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9945BD9B-3EBE-89A5-89C1-A1AB7807AF85</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

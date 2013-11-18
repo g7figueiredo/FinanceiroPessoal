@@ -23,6 +23,10 @@ public class FornecedorBean implements Serializable{
 	private List<Fornecedor> lista;
 	private Fornecedor fornecedor = new Fornecedor();
 	
+	public String inicio(){
+		return "index";
+	}
+	
 	
 	public Fornecedor getFornecedor() {
 		return fornecedor;

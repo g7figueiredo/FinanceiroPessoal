@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9EB32D78-600A-BE9F-53D7-882FFF4362A5" name="tbl_conta_receber">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 04:54:36 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cod_conta" id="0680BBBB-A0A0-9BC2-C30A-91E81A1755ED">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:14:50 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+</Attribute>
+<Attribute name="dt_emissao" id="48B6AF98-DB82-CD88-7AD2-941083169BFB">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:24:24 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Attribute>
+<Attribute name="dt_vencimento" id="9A60A383-5508-253E-0088-E21852C6A618">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:26:52 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Attribute>
+<Attribute name="vl_conta" id="33B2D6D1-6F47-6C77-69BF-25129982FD17">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:27:31 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+</Attribute>
+<Attribute name="descricao" id="5D3B8BC7-F8EB-9019-3B21-291903E5E36A">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:28:25 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+</Attribute>
+<Attribute name="estado" id="B90A6C39-8483-D56B-ABB6-5B005894B4BA">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:38:16 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="323911F9-056F-3B12-476D-89DA799D7A7D" name="tbl_conta_receber PK">
+<createdBy>windows</createdBy>
+<createdTime>2013-11-18 06:15:00 UTC</createdTime>
+<generatorID>Gerado pelo usuário</generatorID>
+<ownerDesignName>modeloFinanceiroPessoal</ownerDesignName>
+<engineerTo>
+<item key="42809243-FB35-4999-2DF9-FB9CB77D04A4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0680BBBB-A0A0-9BC2-C30A-91E81A1755ED</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

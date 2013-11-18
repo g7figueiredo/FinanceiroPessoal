@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Financeiro Pessoal</title>
+	<style type="text/css">
+	body {
+		background-color: #CAE1FF;
+		font-size: 12px
+	}
+	</style>
+	<link href="tema/css/login-box.css" rel="stylesheet" type="text/css" />
+	</h:head>
+
+<h:body>
+	<div style="padding: 100px 0 0 250px;">
+		<div id="login-box">
+			<H2>Login</H2>
+			Bem vindo ao sistema gerenciador financeiro pessoal, por favor efetue seu login.
+			<br /> <br />
+			<div id="login-box-name" style="margin-top: 20px;">CPF:</div>
+			<div id="login-box-field" style="margin-top: 20px;">
+				<p:inputMask styleClass="form-login" value="" mask="999.999.999-99" size="30" maxlength="2048"/>
+			</div>
+			<div id="login-box-name">Password:</div>
+			<div id="login-box-field">
+				<p:password value="" styleClass="form-login" size="30" maxlength="2048" />
+			</div>
+			<br /> 
+			<span class="login-box-options">
+			<p:selectBooleanCheckbox value="" /> Lembrar-Me <a href="#" style="margin-left: 30px;">Esqueceu a Senha?</a></span> <br /> <br /> 
+			<br />
+			<p:commandButton id="btnLogin" value="Login" style="width:100px;" icon="ui-icon-check"/>
+			<p:commandButton id="btnCancel" value="Cancelar" style="width:100px; margin:5;" icon="ui-icon-closethick"/>
+		</div>
+
+	</div>
+
+</h:body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="427D842D-E26D-DCB6-9E46-32FB92047092" name="tbl_banco" seqName="seg_0"/>
+   <object objectType="Entity" objectID="A4BE7CBF-763D-C12F-C0DA-B1FF10C794E3" name="tbl_categoria" seqName="seg_0"/>
+   <object objectType="Entity" objectID="1A566014-5EB0-5A60-E26B-8CC460E6CA36" name="tbl_centro_custo" seqName="seg_0"/>
+   <object objectType="Entity" objectID="C8391E6A-4EC6-520F-F03E-756EDF8CC05A" name="tbl_conta_bancaria" seqName="seg_0"/>
+   <object objectType="Entity" objectID="BF508C45-5112-F426-4F3A-64A1F77B0D28" name="tbl_conta_pagar" seqName="seg_0"/>
+   <object objectType="Entity" objectID="9EB32D78-600A-BE9F-53D7-882FFF4362A5" name="tbl_conta_receber" seqName="seg_0"/>
+   <object objectType="Entity" objectID="E3B37949-A309-E7CA-130E-6E0E198570C9" name="tbl_favorecido" seqName="seg_0"/>
+   <object objectType="Entity" objectID="AFE232B1-9998-C551-6F52-F86CCD11D2E3" name="tbl_fonte_receita" seqName="seg_0"/>
+   <object objectType="Entity" objectID="B936D6C4-CDFE-D21E-9DEA-192670743A08" name="tbl_movimento_credito" seqName="seg_0"/>
+   <object objectType="Entity" objectID="7E19109C-775E-E0C7-4B68-8C774F596668" name="tbl_movimento_debito" seqName="seg_0"/>
+   <object objectType="Entity" objectID="6D7577ED-35F9-4620-B617-B0A32E8A327D" name="tbl_pagamento" seqName="seg_0"/>
+   <object objectType="Entity" objectID="D0CEBA97-1CCC-030B-B554-5E11C69D30A1" name="tbl_receita" seqName="seg_0"/>
+   <object objectType="Entity" objectID="0C618583-7B3F-9CF2-62C2-845AAFDC5E5F" name="tbl_usuario" seqName="seg_0"/>
+   <object objectType="Relation" objectID="F94F42D7-9321-18A2-3895-A3F4B083B096" name="Relation_1" seqName="seg_0"/>
+   <object objectType="Relation" objectID="CE1298F2-633C-D6A0-F9F5-4A1A32740589" name="Relation_10" seqName="seg_0"/>
+   <object objectType="Relation" objectID="520339B8-5DD5-F67B-4FB6-03BA4D0DB138" name="Relation_11" seqName="seg_0"/>
+   <object objectType="Relation" objectID="8012A0BE-644D-19A4-3D43-8A8EA855CB28" name="Relation_12" seqName="seg_0"/>
+   <object objectType="Relation" objectID="BA6CD553-2D44-F721-A4ED-459079D3CBF5" name="Relation_2" seqName="seg_0"/>
+   <object objectType="Relation" objectID="454A5E6A-DAB1-CBE7-FDED-212F7245E4EA" name="Relation_3" seqName="seg_0"/>
+   <object objectType="Relation" objectID="0853C6A4-8FD9-321D-16CE-098D95AC526E" name="Relation_4" seqName="seg_0"/>
+   <object objectType="Relation" objectID="381E3856-518F-89BE-BB19-10CD0CB8F477" name="Relation_6" seqName="seg_0"/>
+   <object objectType="Relation" objectID="ABA5E26E-1BF9-2A47-14D8-862EEE40BCFB" name="Relation_7" seqName="seg_0"/>
+   <object objectType="Relation" objectID="8130A5B8-28D4-1A64-3B1C-73D51F389748" name="Relation_8" seqName="seg_0"/>
+   <object objectType="Relation" objectID="0507A574-5E09-2EC8-4371-5C827E5A7705" name="Relation_9" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>
