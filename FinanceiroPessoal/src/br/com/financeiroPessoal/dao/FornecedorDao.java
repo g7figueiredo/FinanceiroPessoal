@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.financeiroPessoal.bean.Fornecedor;
-import br.com.financeiroPessoal.controle.FornecedorBean;
+import br.com.financeiroPessoal.bean.Favorecido;
+import br.com.financeiroPessoal.controle.FavorecidoBean;
 import br.com.financeiroPessoal.exception.DaoException;
 import br.com.financeiroPessoal.util.DbUtil;
 
@@ -22,8 +22,8 @@ public class FornecedorDao {
 	
 	private static final String EXCLUIR = "delete from tbl_fornecedor where id = ?";
 	
-	private Fornecedor getBean(ResultSet result) throws DaoException, SQLException{
-		Fornecedor bean = new Fornecedor();
+	private Favorecido getBean(ResultSet result) throws DaoException, SQLException{
+		Favorecido bean = new Favorecido();
 		
 		bean.setCodigo(result.getInt("id"));
 		bean.setNomeRazao(result.getString("nome"));
@@ -31,7 +31,7 @@ public class FornecedorDao {
 		return bean;
 	}
 	
-	public void inserir(Fornecedor f) throws DaoException{
+	public void inserir(Favorecido f) throws DaoException{
 		Connection conn = DbUtil.getConnection();
 		PreparedStatement statement = null;
 		ResultSet result = null;
@@ -47,17 +47,17 @@ public class FornecedorDao {
 		}
 	}
 	
-	public List<Fornecedor> listar() throws DaoException{
+	public List<Favorecido> listar() throws DaoException{
 		Connection conn = DbUtil.getConnection();
 		PreparedStatement statement = null;
 		ResultSet result = null;
-		List<Fornecedor> retorno = new ArrayList<Fornecedor>();
+		List<Favorecido> retorno = new ArrayList<Favorecido>();
 		try{
 			statement = conn.prepareStatement(BUSCAR_TODOS);
 			result = statement.executeQuery();
 			
 			while(result.next()){
-				Fornecedor b = getBean(result);
+				Favorecido b = getBean(result);
 				retorno.add(b);
 			}
 		}catch(SQLException e){
@@ -69,7 +69,7 @@ public class FornecedorDao {
 		return retorno;
 	}
 	
-	public void editar(Fornecedor f) throws DaoException{
+	public void editar(Favorecido f) throws DaoException{
 		Connection conn = DbUtil.getConnection();
 		PreparedStatement statement = null;
 		ResultSet result = null;
@@ -86,7 +86,7 @@ public class FornecedorDao {
 		}
 	}
 	
-	public void excluir(Fornecedor f) throws DaoException{
+	public void excluir(Favorecido f) throws DaoException{
 		Connection conn = DbUtil.getConnection();
 		PreparedStatement statement = null;
 		ResultSet result = null;

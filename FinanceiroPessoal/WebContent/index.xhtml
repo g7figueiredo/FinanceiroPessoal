@@ -28,8 +28,9 @@
 						    <p:menubar>
 						    	<p:menuitem value="Inicio" icon="ui-icon-home" url="index.jsf" />
 						    	<p:submenu label="Cadastros" icon="ui-icon-document-b">
-						    		<p:menuitem value="Fonte de receita" icon="ui-icon-document-b" url="fonteReceita.jsf"/>
+						    		<p:menuitem value="Fonte de receita" icon="ui-icon-document-b" url="favorecido.jsf"/>
 						    		<p:menuitem value="Centro de custo" icon="ui-icon-document-b" url="centroCusto.jsf"/>
+						    		<p:menuitem value="Contas bancárias" icon="ui-icon-document-b" url="contasBancarias.jsf" />
 						    	</p:submenu>
 						  		<p:submenu label="Gestão de contas">  
 					                <p:menuitem value="Mov. de contas" url="#" style="margin:2" icon="imagemMovimentacao"/>
@@ -47,7 +48,39 @@
 						    </p:menubar>
 						    <!-- FIM MENU -->
 						
-						</h:form>          
+						</h:form>
+						
+						<h:form id="form">  
+  
+						    <p:growl id="growl" showDetail="true" />  
+						  
+						    <p:dashboard id="board" model="#{dashboardBean.model}">  
+						        <p:ajax event="reorder" listener="#{dashboardBean.handleReorder}" update="growl" />  
+						  
+						        <p:panel id="sports" header="Sports" style="width:500px; max-height:400px;">  
+						            <h:form>
+						            	<p:barChart id="barChart" value="#{chartBean.categoryModel}" legendPosition="ne"  
+									            title="Interactive Bar Chart" style="height:300px">  
+									        <p:ajax event="itemSelect" listener="#{chartBean.itemSelect}" />  
+									    </p:barChart> 
+						            </h:form> 
+						        </p:panel>  
+						  
+						        <p:panel id="finance" header="Finance">  
+						            <h:outputText value="Finance Content" />  
+						        </p:panel>  
+						  
+						        <p:panel id="lifestyle" header="Lifestyle" style="width:480px;max-height:400px;">  
+						            <h:outputText value="Lifestyle Content"  />  
+						        </p:panel>  
+						  
+						        <p:panel id="weather" header="Weather">  
+						            <h:outputText value="Weather Content" />  
+						        </p:panel>  
+						  
+						    </p:dashboard>  
+						  
+						</h:form>       
 						  
                     </ui:insert>
                 </p:layoutUnit>  

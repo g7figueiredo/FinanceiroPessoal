@@ -5,7 +5,7 @@ import javax.faces.bean.RequestScoped;
 
 @ManagedBean
 @RequestScoped
-public class Fornecedor {
+public class Favorecido {
 	
 	private int codigo;
 	private String nomeRazao;

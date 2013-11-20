@@ -10,32 +10,32 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 
-import br.com.financeiroPessoal.bean.Fornecedor;
+import br.com.financeiroPessoal.bean.Favorecido;
 import br.com.financeiroPessoal.dao.FornecedorDao;
 import br.com.financeiroPessoal.exception.DaoException;
 
 
-@ManagedBean(name="fornecedorBean")
+@ManagedBean(name="favorecidoBean")
 @SessionScoped
-public class FornecedorBean implements Serializable{
+public class FavorecidoBean implements Serializable{
 	
 	private Map<Integer, String> valuesCusto;
-	private List<Fornecedor> lista;
-	private Fornecedor fornecedor = new Fornecedor();
+	private List<Favorecido> lista;
+	private Favorecido favorecido = new Favorecido();
 	
 	public String inicio(){
 		return "index";
 	}
 	
 	
-	public Fornecedor getFornecedor() {
-		return fornecedor;
+	public Favorecido getFornecedor() {
+		return favorecido;
 	}
-	public void setFornecedor(Fornecedor fornecedor) {
-		this.fornecedor = fornecedor;
+	public void setFornecedor(Favorecido fornecedor) {
+		this.favorecido = fornecedor;
 	}
 
-	public FornecedorBean(){
+	public FavorecidoBean(){
 		valuesCusto = new LinkedHashMap<Integer, String>();
         valuesCusto.put(1, "Educação");
         valuesCusto.put(2, "Diversos");
@@ -51,17 +51,17 @@ public class FornecedorBean implements Serializable{
 	
 	public String inserir(ActionEvent actionEvent) {
 		try{
-			if(this.fornecedor.getCodigo() != 0){
-				new FornecedorDao().editar(this.fornecedor);
+			if(this.favorecido.getCodigo() != 0){
+				new FornecedorDao().editar(this.favorecido);
 				FacesContext context = FacesContext.getCurrentInstance();  
 		        context.addMessage(null, new FacesMessage("Sucesso", "Dados atualizados!"));
 			}else{
-				new FornecedorDao().inserir(this.fornecedor);
+				new FornecedorDao().inserir(this.favorecido);
 				FacesContext context = FacesContext.getCurrentInstance();  
 		        context.addMessage(null, new FacesMessage("Sucesso", "Dados armazenados!"));
 			}
 			
-			this.fornecedor = null;
+			this.favorecido = null;
 			this.lista = null;
 		}catch(DaoException e){
 			e.printStackTrace();
@@ -70,7 +70,7 @@ public class FornecedorBean implements Serializable{
 		return null;
 	}
 	
-	public List<Fornecedor> getLista() throws DaoException{
+	public List<Favorecido> getLista() throws DaoException{
 		if(this.lista == null){
 			FornecedorDao dao = new FornecedorDao();
 			this.lista = dao.listar();
@@ -89,9 +89,9 @@ public class FornecedorBean implements Serializable{
 	
 	public String excluir() throws DaoException{
 		FornecedorDao dao = new FornecedorDao();
-		dao.excluir(this.fornecedor);
+		dao.excluir(this.favorecido);
 		
-		this.fornecedor = null;
+		this.favorecido = null;
 		this.lista = null;
 		return null;
 		

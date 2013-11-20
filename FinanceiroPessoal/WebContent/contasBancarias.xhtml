@@ -1,0 +1,126 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Financeiro Pessoal - Cadastros</title>
+	<style type="text/css">
+body {
+	background-color: #CAE1FF;
+	font-size: 12px
+}
+</style>
+</h:head>
+<h:body>
+	<div align="center">
+		<p:layout
+			style="min-width:1020px;max-width:1020px;min-height:650px;max-height:650px;">
+			<p:layoutUnit position="north" size="165">
+				<h:graphicImage url="/tema/imagens/topo.png" />
+			</p:layoutUnit>
+			
+			<div align="left">
+				<p:layoutUnit position="center">
+					<ui:insert name="centro">
+						<h:form>
+							<!-- INICIO MENU -->
+							<p:growl id="messages" />
+							<p:menubar>
+								<p:menuitem value="Inicio" icon="ui-icon-home" url="index.jsf" />
+								<p:submenu label="Cadastros" icon="ui-icon-document-b">
+							    	<p:menuitem value="Fonte de receita" icon="ui-icon-document-b" url="fonteReceita.jsf"/>
+							    	<p:menuitem value="Centro de custo" icon="ui-icon-document-b" url="centroCusto.jsf"/>
+							    </p:submenu>
+								<p:submenu label="Gestão de contas">
+									<p:menuitem value="Mov. de contas" url="#" style="margin:2"
+										icon="imagemMovimentacao" />
+									<p:menuitem value="Contas à receber" url="#" style="margin:2"
+										icon="imagemContasReceber" />
+									<p:menuitem value="Contas à pagar" url="#" style="margin:2"
+										icon="imagemContasPagar" />
+									<p:menuitem value="Relatórios" url="#" style="margin:2"
+										icon="imagemRelatorios" />
+								</p:submenu>
+								<p:menuitem value="Relatórios e gráficos" icon="ui-icon-document" />
+								<p:menuitem value="Configurações" icon="ui-icon-wrench" />
+	
+								<f:facet name="options">
+									<p:inputText style="margin-right:10px" />
+									<p:commandButton type="button" value="Logout"
+										icon="ui-icon-extlink" />
+								</f:facet>
+							</p:menubar>
+							<!-- FIM MENU -->
+	
+						</h:form>
+	
+						<h:form>
+							<p:panelGrid columns="4">  
+							    <f:facet name="header">  
+							        Cadastro de contas bancárias 
+							    </f:facet>  
+							  
+							    <h:outputLabel for="nrConta" value="Número da conta: *" />  
+							    <p:inputText id="nrConta" value="#{contaBancariaBean.contaBancaria.nrConta}" label="Número da Conta" required="true" size="20">
+							    	<p:tooltip for="nrConta" value="Digite o número da conta sem o digito" showEffect="fade" hideEffect="fade" />   
+							    </p:inputText>
+							  
+							    <h:outputLabel for="digito" value="Digito: *" />  
+							    <p:inputText id="digitoConta" value="#{contaBancariaBean.contaBancaria.digConta}" required="true" label="Digito" size="2" maxlength="2">
+							    	<p:tooltip for="digitoConta" value="Digite o digito da conta" showEffect="fade" hideEffect="fade" />
+							    </p:inputText>
+							    
+							    <h:outputLabel for="nrAgencia" value="Número da agência: *"/>
+							    <p:inputText id="nrAgencia" value="#{contaBancariaBean.contaBancaria.nrAgencia}" required="true" label="Número da agência">
+							    	<p:tooltip for="nrAgencia" value="Digite o número da agência sem o digito" showEffect="fade" hideEffect="fade" /> 
+							    </p:inputText>
+							    
+							    <h:outputLabel for="digito" value="Digito: *" />  
+							    <p:inputText id="digitoAgencia" value="#{contaBancariaBean.contaBancaria.digAgencia}" required="true" label="Digito" size="2" maxlength="2">
+							    	<p:tooltip for="digitoAgencia" value="Digite o digito da agência" showEffect="fade" hideEffect="fade" /> 
+							    </p:inputText>
+							    
+							    <h:outputLabel for="tipoConta" value="Tipo de Conta: *"/>
+							    <h:selectOneMenu id="tipoConta" style="width:150;" value="#{contaBancariaBean.contaBancaria.tipoConta}" required="true">  
+					                <f:selectItem itemLabel="Selecione um" itemValue=""/>  
+					                <f:selectItems value="#{contaBancariaBean.valuesTipo}" />  
+					            	<p:tooltip for="tipoConta" value="Selecione o tipo de conta" showEffect="fade" hideEffect="fade" /> 
+					            </h:selectOneMenu>
+					            <h:outputLabel /><h:outputLabel />
+					            
+					            <h:outputLabel for="banco" value="Banco: *"/>
+							    <h:selectOneMenu id="banco" style="width:150;" value="#{contaBancariaBean.contaBancaria.codBanco}" required="true">  
+					                <f:selectItem itemLabel="Selecione um" itemValue=""/>  
+					                <f:selectItems value="#{contaBancariaBean.valuesBanco}" />  
+					            	<p:tooltip for="banco" value="Selecione o banco da conta" showEffect="fade" hideEffect="fade" /> 
+					            </h:selectOneMenu>
+					            <h:outputLabel /><h:outputLabel />
+					            
+					            <h:outputLabel for="chequeEspecial" value="Cheque especial R$: " />
+					            <p:inputText id="chequeEspecial" value="#{contaBancariaBean.contaBancaria.chequeEspecial}" label="Cheque especial" requiredMessage="Preencha este campo com o valor da parcela" timaxlength="15" size="20" >
+								    <f:convertNumber pattern="#,##0.00"></f:convertNumber>  
+									<p:tooltip for="chequeEspecial" value="Digite o valor do cheque especial" showEffect="fade" hideEffect="fade" />
+								</p:inputText>
+								<h:outputLabel /><h:outputLabel />
+							  
+							    <f:facet name="footer">  
+							        <p:commandButton type="button" value="Salvar" icon="ui-icon-check" style="margin:0" id="btnSalvar">
+							        	<p:tooltip for="btnSalvar" value="Clique para salvar" showEffect="fade" hideEffect="fade" /> 
+							        </p:commandButton>
+							        <p:commandButton type="button" value="Cancelar" icon="ui-icon-closethick" style="margin:5" id="btnCancelar">
+							        	<p:tooltip for="btnCancelar" value="Clique para cancelar" showEffect="fade" hideEffect="fade" /> 
+							        </p:commandButton>
+							    </f:facet>  
+							</p:panelGrid> 
+						
+						</h:form>
+					</ui:insert>
+				</p:layoutUnit>
+			</div>
+		</p:layout>
+	</div>
+</h:body>
+</html>

@@ -60,31 +60,31 @@ body {
 
 					</h:form>
 
-					<h:form id="CadastroFonteReceita">
+					<h:form id="CadastroFavorecido">
 						<p:growl id="growl" showDetail="true" life="4000" />
 						<p:panelGrid columns="4">
 
 							<f:facet name="header">  
-									        Cadastro de fonte de receita  
+									        Cadastro de favorecido  
 									    </f:facet>
 
 							<h:outputLabel for="nomeRazao" value="Nome/Razão Social: *" />
 							<p:inputText id="nomeRazao"
-								value="#{fornecedorBean.fornecedor.nomeRazao}"
+								value="#{favorecidoBean.favorecido.nomeRazao}"
 								label="Nome/Razão Social" size="50" required="true" />
 
 							<h:outputLabel for="ramoAtiv" value="Serviço Prestado: *" />
 							<p:inputText id="ramoAtiv"
-								value="#{fornecedorBean.fornecedor.ramoAtividade}"
+								value="#{favorecidoBean.favorecido.ramoAtividade}"
 								label="Servico Prestado" size="25" required="true" />
 
 
 							<f:facet name="footer">
-								<p:commandButton actionListener="#{fornecedorBean.inserir}"
+								<p:commandButton actionListener="#{favorecidoBean.inserir}"
 									id="btnSalvar" value="Salvar" icon="ui-icon-check"
 									style="margin:0" update="growl" />
 
-								<p:commandButton action="#{fornecedorBean.inicio}"
+								<p:commandButton action="#{favorecidoBean.inicio}"
 									id="btnCancelar" value="Cancelar" icon="ui-icon-closethick"
 									style="margin:5" update="growl" />
 							</f:facet>
@@ -96,36 +96,36 @@ body {
 					<p:separator id="separator" />
 
 					<h:form>
-						<p:dataTable var="fornecedor" align="center" 
-							value="#{fornecedorBean.lista}" scrollRows="20" scrollable="true"
-							liveScroll="true" scrollHeight="150" rowKey="fornecedor.codigo">
+						<p:dataTable var="favorecido" align="center" 
+							value="#{favorecidoBean.lista}" scrollRows="20" scrollable="true"
+							liveScroll="true" scrollHeight="150" rowKey="favorecido.codigo">
 
 							<p:column headerText="Código" width="60">
-								<h:outputText value="#{fornecedor.codigo}" />
+								<h:outputText value="#{favorecido.codigo}" />
 							</p:column>
 
 							<p:column headerText="Nome/Razão Social" width="300">
-								<h:outputText value="#{fornecedor.nomeRazao}" />
+								<h:outputText value="#{favorecido.nomeRazao}" />
 							</p:column>
 
 							<p:column headerText="Serviços Prestado">
-								<h:outputText value="#{fornecedor.ramoAtividade}" />
+								<h:outputText value="#{favorecido.ramoAtividade}" />
 							</p:column>
 
 							<p:column headerText="Editar" width="40">
-								<h:commandLink action="#{fornecedorBean.editar}">
+								<h:commandLink action="#{favorecidoBean.editar}">
 									<h:graphicImage url="/tema/imagens/edit.png" style="border:0" />
 									<f:setPropertyActionListener
-										target="#{fornecedorBean.fornecedor}" value="#{fornecedor}" />
+										target="#{favorecidoBean.fornecedor}" value="#{favorecido}" />
 								</h:commandLink>
 							</p:column>
 
 							<p:column headerText="Excluir" width="50">
-								<h:commandLink action="#{fornecedorBean.excluir}"
-									onclick="if (!confirm('Confirma a exclusão do fornecedor #{fornecedor.nomeRazao}?')) return false;">
+								<h:commandLink action="#{favorecidoBean.excluir}"
+									onclick="if (!confirm('Confirma a exclusão do fornecedor #{favorecido.nomeRazao}?')) return false;">
 									<h:graphicImage url="/tema/imagens/delete.png" style="border:0" />
 									<f:setPropertyActionListener
-										target="#{fornecedorBean.fornecedor}" value="#{fornecedor}" />
+										target="#{favorecidoBean.fornecedor}" value="#{favorecido}" />
 								</h:commandLink>
 							</p:column>
 
